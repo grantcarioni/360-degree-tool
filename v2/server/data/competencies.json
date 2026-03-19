@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "name": "Grant Carioni",
+    "title": "Senior Director, People & Culture",
+    "skills": [
+      { "id": "hr-strat", "name": "HR Strategy & Operations", "category": "Human Resources" },
+      { "id": "talent", "name": "Talent Acquisition", "category": "Human Resources" },
+      { "id": "comp", "name": "Compensation & Benefits", "category": "Human Resources" },
+      { "id": "emp-rel", "name": "Employee Relations", "category": "Human Resources" },
+      { "id": "org-design", "name": "Organizational Design", "category": "Human Resources" },
+      { "id": "leadership", "name": "Leadership Development", "category": "Human Resources" },
+      { "id": "dei", "name": "DEI Strategy", "category": "Human Resources" },
+      { "id": "perf-mgmt", "name": "Performance Management", "category": "Human Resources" },
+      { "id": "safety", "name": "Global Safety & Security", "category": "Operations" }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Arif Pyarali",
+    "title": "Manager, Global Learning & Development",
+    "skills": [
+      { "id": "ld", "name": "Learning & Development", "category": "Human Resources" },
+      { "id": "hr", "name": "Human Resources", "category": "Human Resources" },
+      { "id": "instructional", "name": "Instructional Design", "category": "Human Resources" },
+      { "id": "training", "name": "Training Facilitation", "category": "Human Resources" },
+      { "id": "od", "name": "Organizational Development", "category": "Human Resources" },
+      { "id": "keynote", "name": "Keynote Speaking", "category": "Human Resources" },
+      { "id": "stakeholder", "name": "Stakeholder Management", "category": "Human Resources" }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Aatekah Owais",
+    "title": "Technical Advisor, AWHN",
+    "skills": [
+      { "id": "awhn", "name": "Adolescent & Women's Health & Nutrition", "category": "Health/Nutrition" },
+      { "id": "tech-adv", "name": "Technical Advisory", "category": "Health/Nutrition" },
+      { "id": "research", "name": "Program Implementation Research", "category": "Research" }
+    ]
+  }
+]

@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 10% 97%;
+    --foreground: 207 31% 21%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 207 31% 21%;
+    
+    --primary: 207 31% 21%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 207 20% 92%;
+    --secondary-foreground: 207 31% 21%;
+    
+    --muted: 207 15% 93%;
+    --muted-foreground: 207 12% 48%;
+    
+    --accent: 357 52% 42%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 207 20% 87%;
+    --input: 207 20% 87%;
+    --ring: 207 31% 21%;
+
+    --radius: 0.5rem;
+
+    /* NI Specific Colors */
+    --ni-charcoal: #253746;
+    --ni-carmine: #A4343A;
+    --ni-surface: #f2f4f5;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  body {
+    @apply bg-ni-surface text-ni-charcoal;
+    font-family: "Lora", serif;
+  }
+  h1, h2, h3, h4, h5, h6, button, label, nav {
+    font-family: "DM Sans", sans-serif;
+  }
+}
+
+.ni-gradient {
+  background: linear-gradient(135deg, var(--ni-charcoal) 0%, #3a5165 100%);
+}
+
+.ni-btn-primary {
+  @apply bg-[#A4343A] hover:bg-[#c84d54] text-white px-4 py-2 rounded-md transition-colors;
+}
+
+.ni-card {
+  @apply bg-white border border-gray-200 rounded-lg shadow-sm p-6;
+}
