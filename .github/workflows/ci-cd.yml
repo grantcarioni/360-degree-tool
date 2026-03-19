@@ -10,8 +10,7 @@ on:
 
 env:
   NODE_VERSION: '20'
-  # [ACTION REQUIRED] Replace with your actual Azure Web App name
-  AZURE_WEBAPP_NAME: ni-360-feedback-app 
+  AZURE_WEBAPP_NAME: 360-degree-tool 
   AZURE_RESOURCE_GROUP: incident-reporting-rg # Reusing your resource group
   AZURE_LOCATION: eastus2
 

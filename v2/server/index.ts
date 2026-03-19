@@ -23,6 +23,20 @@ app.use((req, res, next) => {
 (async () => {
   await registerRoutes(app);
 
+  // Serve static files in production
+  if (process.env.NODE_ENV === "production") {
+    const publicPath = path.resolve(__dirname, "..", "dist");
+    app.use(express.static(publicPath));
+
+    app.get("*", (req, res, next) => {
+      // Don't intercept API calls
+      if (req.path.startsWith("/api")) {
+        return next();
+      }
+      res.sendFile(path.resolve(publicPath, "index.html"));
+    });
+  }
+
   // Error handling
   app.use((err: any, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
     const status = err.status || err.statusCode || 500;
@@ -31,7 +45,7 @@ app.use((req, res, next) => {
     res.status(status).json({ message });
   });
 
-  const port = process.env.PORT || 5000;
+  const port = Number(process.env.PORT || 5000);
   const httpServer = createServer(app);
   
   httpServer.listen(port, "0.0.0.0", () => {
