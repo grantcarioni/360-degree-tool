@@ -6,32 +6,24 @@
   :root {
     --background: 210 10% 97%;
     --foreground: 207 31% 21%;
-    
     --card: 0 0% 100%;
     --card-foreground: 207 31% 21%;
-    
     --primary: 207 31% 21%;
     --primary-foreground: 0 0% 100%;
-    
     --secondary: 207 20% 92%;
     --secondary-foreground: 207 31% 21%;
-    
     --muted: 207 15% 93%;
     --muted-foreground: 207 12% 48%;
-    
     --accent: 357 52% 42%;
     --accent-foreground: 0 0% 100%;
-    
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 207 20% 87%;
     --input: 207 20% 87%;
     --ring: 207 31% 21%;
-
     --radius: 0.5rem;
 
-    /* NI Specific Colors */
+    /* NI Brand Colors */
     --ni-charcoal: #253746;
     --ni-carmine: #A4343A;
     --ni-surface: #f2f4f5;
@@ -51,14 +43,53 @@
   }
 }
 
+/* ── Design tokens ────────────────────────────── */
 .ni-gradient {
   background: linear-gradient(135deg, var(--ni-charcoal) 0%, #3a5165 100%);
 }
 
 .ni-btn-primary {
-  @apply bg-[#A4343A] hover:bg-[#c84d54] text-white px-4 py-2 rounded-md transition-colors;
+  @apply bg-[#A4343A] hover:bg-[#c84d54] active:bg-[#8b2a2f] text-white px-5 py-2.5 rounded-md transition-all font-medium shadow-sm hover:shadow-md;
 }
 
 .ni-card {
-  @apply bg-white border border-gray-200 rounded-lg shadow-sm p-6;
+  @apply bg-white border border-gray-200 rounded-xl shadow-sm p-6;
+}
+
+/* ── Toast animations ─────────────────────────── */
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.toast-slide-in {
+  animation: toast-in 0.25s ease-out forwards;
+}
+
+/* ── Page fade-in ─────────────────────────────── */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.2s ease-out forwards;
+}
+
+/* ── Skeleton shimmer ─────────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
 }

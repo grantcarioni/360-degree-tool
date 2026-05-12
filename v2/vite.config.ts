@@ -10,7 +10,8 @@ export default defineConfig({
     },
   },
   server: {
-    port: 3002, // Changed to 3002 to avoid conflict with the built app
+    host: '0.0.0.0',
+    port: 3002,
     proxy: {
       '/api': 'http://localhost:5000',
     },
